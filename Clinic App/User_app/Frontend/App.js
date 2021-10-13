@@ -1,7 +1,7 @@
 import React from 'react';
-import ChatList from './src/screens/ChatList';
+import Chatlist from './src/screens/Chatlist';
 export default class App extends React.Component {
   render() {
-    return <ChatList />;
+    return <Chatlist />;
   }
 }
