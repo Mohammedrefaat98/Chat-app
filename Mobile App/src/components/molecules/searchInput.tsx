@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Dimensions, TextInput } from 'react-native';
-import Icon from '../atoms/icons';
+import Icon from '../atoms/icon';
 export default class SearchInput extends Component<{
-    style: any
+    style?: any
 }>
 
 {
@@ -20,21 +20,6 @@ export default class SearchInput extends Component<{
     }
 }
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#FFFFFF'
-    },
-    Chatlist: {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height - 116
-    },
-    Cancel: {
-        fontSize: 17,
-        fontWeight: '400',
-        top: 15,
-        left: 0.805 * Dimensions.get('window').width,
-        color: '#007AFF'
-    },
     SearchBar: {
         width: 0.728 * Dimensions.get('window').width,
         height: 36,
@@ -49,10 +34,6 @@ const styles = StyleSheet.create({
         top: -4,
         height: 45,
         width: 0.53 * Dimensions.get('window').width,
-    },
-    SearchContainer: {
-        width: Dimensions.get('window').width,
-        height: 56
     },
     Searchicon: {
         left: 8.18,

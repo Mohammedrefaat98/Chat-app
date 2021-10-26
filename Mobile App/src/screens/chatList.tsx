@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Dimensions, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ScrollView  } from 'react-native';
 import SearchInput from '../components/molecules/searchInput';
 
 //@ts-ignore;
 import { ChatItem } from 'react-chat-elements/native'
 
-function Chatlist() {
+function chatlist() {
     return (
         <View style={styles.container}>
             <View style={styles.SearchContainer}>
                 <SearchInput style={styles.SearchInput} />
                 <Text style={styles.Cancel}>Cancel</Text>
             </View>
-            <View style={styles.Chatlist}>
+            <ScrollView style={styles.Chatlist}>
                 <ChatItem
                     avatar={'https://i.postimg.cc/g0XDCfv2/portrait-smiling-handsome-male-doctor-man-171337-5055-modified.png'}
                     alt={'App'}
@@ -21,7 +21,7 @@ function Chatlist() {
                     date={new Date('October 10, 2021 03:24:00')}
                     unread={0}
                     />
-            </View>
+            </ScrollView >
         </View>
     );
 }
@@ -38,19 +38,22 @@ const styles = StyleSheet.create({
     Cancel: {
         fontSize: 17,
         fontWeight: '400',
-        top: 15,
-        left: 0.805 * Dimensions.get('window').width,
+        alignSelf:'center',
+        position:'absolute',
+        right:20,
         color: '#007AFF'
     },
     SearchInput: {
-        top: 10,
-        left: 16
+        position:'absolute',
+        left: 16,
+        alignSelf:'center'
     },
     SearchContainer: {
         width: Dimensions.get('window').width,
-        height: 56
+        height: 56,
+        flexDirection:'row'
     },
 
 });
 
-export default Chatlist;
+export default chatlist;

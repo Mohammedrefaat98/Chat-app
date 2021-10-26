@@ -59,8 +59,8 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-/src/screens/ChatPage.tsx
 
 /android
 
 /ios
+/mobile app
