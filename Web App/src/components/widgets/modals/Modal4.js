@@ -102,32 +102,58 @@ const contacts = [
     lastActivity: now.getTime(),
     name: 'Nasimiyu Danai',
     username: 'nasimiyu.danai'
-  }
+  },
 ];
 
 const Modal4 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
-      minHeight: '100%',
-      p: 3
+      display: 'inline-flex',
+      p: 3,
     }}
   >
     <Paper
       elevation={12}
       sx={{
-        maxWidth: 320,
-        mx: 'auto',
-        p: 2
+        height: '66vh',
+        minWidth: '25vw',
       }}
     >
-      <Typography
-        color="textPrimary"
-        variant="h6"
+      <Paper
+        elevation={0}
+        sx={{
+          zIndex: 2,
+          position: 'sticky',
+          p: 2,
+          display: 'flex',
+          height: '14%'
+        }}
       >
-        Contacts
-      </Typography>
-      <Box sx={{ mt: 2 }}>
+        <Typography
+          color="textPrimary"
+          variant="h6"
+        >
+          Contacts
+        </Typography>
+      </Paper>
+      <Paper
+        elevation={0}
+        sx={{
+          px: 2,
+          height: '86%',
+          width: '96%',
+          display: 'flex-inline',
+          overflow: 'auto',
+          '::-webkit-scrollbar': {
+            width: '5px',
+          },
+          '::-webkit-scrollbar-thumb': {
+            boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
+            borderRadius: '10px'
+          },
+        }}
+      >
         <List disablePadding>
           {contacts.map((contact) => (
             <ListItem
@@ -172,7 +198,7 @@ const Modal4 = () => (
             </ListItem>
           ))}
         </List>
-      </Box>
+      </Paper>
     </Paper>
   </Box>
 );

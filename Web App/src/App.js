@@ -1,23 +1,21 @@
 import { useEffect } from 'react';
-import { useRoutes } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import './i18n';
 import RTL from './components/RTL';
 import SettingsDrawer from './components/SettingsDrawer';
-import SplashScreen from './components/SplashScreen';
 import { gtmConfig } from './config';
-import useAuth from './hooks/useAuth';
 import useScrollReset from './hooks/useScrollReset';
 import useSettings from './hooks/useSettings';
 import gtm from './lib/gtm';
-import routes from './routes';
 import { createCustomTheme } from './theme';
+// import Modal4 from './components/widgets/modals/Modal4';
+import Modal3 from './components/widgets/modals/Modal3';
+// import { MessageList } from 'react-chat-elements';
+import 'react-chat-elements/dist/main.css';
+import ChatLayout from './components/widgets/modals/ChatLayout';
 
 const App = () => {
-  const content = useRoutes(routes);
   const { settings } = useSettings();
-  const auth = useAuth();
 
   useScrollReset();
 
@@ -36,9 +34,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <RTL direction={settings.direction}>
         <CssBaseline />
-        <Toaster position="top-center" />
         <SettingsDrawer />
-        {auth.isInitialized ? content : <SplashScreen />}
+        <Modal3 />
+        <ChatLayout />
       </RTL>
     </ThemeProvider>
   );

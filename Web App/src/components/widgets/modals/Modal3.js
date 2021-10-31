@@ -2,37 +2,23 @@ import {
   Box,
   Button,
   Container,
-  IconButton,
   InputAdornment,
   Paper,
   TextField
 } from '@material-ui/core';
 import SearchIcon from '../../../icons/Search';
-import XIcon from '../../../icons/X';
 
 const Modal3 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
-      minHeight: '100%',
-      p: 3
+      p: 3,
+      textAlign: '-webkit-center'
     }}
   >
-    <Paper elevation={12}>
+    <Paper elevation={12} sx={{ flex: 1, textAlign: '-webkit-center', justifyContent: 'center', width: '80%', maxWidth: 'md' }}>
       <Box sx={{ p: 3 }}>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'flex-end'
-          }}
-        >
-          <IconButton>
-            <XIcon fontSize="small" />
-          </IconButton>
-        </Box>
-      </Box>
-      <Box sx={{ p: 3 }}>
-        <Container maxWidth="md">
+        <Container width="30%" maxWidth="md" sx={{ textAlign: '-webkit-center' }}>
           <Box
             sx={{
               alignItems: 'center',
