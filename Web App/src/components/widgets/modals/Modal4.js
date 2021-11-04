@@ -8,9 +8,11 @@ import {
   ListItemAvatar,
   ListItemText,
   Paper,
-  Typography
+  Typography,
+  Button
 } from '@material-ui/core';
 import StatusIndicator from '../../StatusIndicator';
+import FirstAidKitIcon from '../../../icons/FirstAidKit';
 
 const now = new Date();
 
@@ -109,30 +111,33 @@ const Modal4 = () => (
   <Box
     sx={{
       backgroundColor: 'background.default',
-      display: 'inline-flex',
+      display: 'flex',
+      flexDirection: 'column',
       p: 3,
     }}
   >
     <Paper
       elevation={12}
       sx={{
-        height: '66vh',
+        height: 'fit',
         minWidth: '25vw',
       }}
     >
       <Paper
         elevation={0}
         sx={{
-          zIndex: 2,
-          position: 'sticky',
-          p: 2,
           display: 'flex',
-          height: '14%'
+          height: '10vh'
         }}
       >
         <Typography
           color="textPrimary"
           variant="h6"
+          sx={{
+            zIndex: 2,
+            position: 'sticky',
+            p: 2,
+          }}
         >
           Contacts
         </Typography>
@@ -140,22 +145,56 @@ const Modal4 = () => (
       <Paper
         elevation={0}
         sx={{
+          backgroundColor: 'rgba(0,0,0,0)',
           px: 2,
-          height: '86%',
-          width: '96%',
+          height: 'fit',
+          width: '100%',
           display: 'flex-inline',
-          overflow: 'auto',
-          '::-webkit-scrollbar': {
-            width: '5px',
-          },
-          '::-webkit-scrollbar-thumb': {
-            boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
-            borderRadius: '10px'
-          },
         }}
       >
-        <List disablePadding>
-          {contacts.map((contact) => (
+        <List
+          disablePadding
+          sx={{
+            pr: 2,
+            overflow: 'auto',
+            '::-webkit-scrollbar': {
+              width: '5px',
+            },
+            '::-webkit-scrollbar-thumb': {
+              boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
+              borderRadius: '20px'
+            },
+            maxHeight: '58vh'
+          }}
+        >
+          {contacts.length <= 0 ? (
+            <Paper
+              elevation={0}
+              sx={{
+                display: 'flex',
+                minHeight: '58vh',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <FirstAidKitIcon fontSize="large" />
+              <Typography sx={{ py: 2, textAlign: 'center' }} variant="h6">
+                You have no patients yet.
+              </Typography>
+              <Typography variant="body2" sx={{ textAlign: 'center', color: '#6b778c' }}>
+                Invite your first patient and start working with him!
+              </Typography>
+              <Button
+                color="primary"
+                size="large"
+                sx={{ my: 2 }}
+                variant="contained"
+              >
+                Invite a patient
+              </Button>
+            </Paper>
+          ) : contacts.map((contact) => (
             <ListItem
               disableGutters
               key={contact.id}

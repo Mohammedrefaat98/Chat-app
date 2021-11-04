@@ -7,6 +7,7 @@ import {
   TextField
 } from '@material-ui/core';
 import SearchIcon from '../../../icons/Search';
+import AdjustmentIcon from '../../../icons/Adjustments';
 
 const Modal3 = () => (
   <Box
@@ -31,6 +32,11 @@ const Modal3 = () => (
                 startAdornment: (
                   <InputAdornment position="start">
                     <SearchIcon fontSize="small" />
+                  </InputAdornment>
+                ),
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <AdjustmentIcon fontSize="small" />
                   </InputAdornment>
                 )
               }}
