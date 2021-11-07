@@ -12,7 +12,7 @@ import { createCustomTheme } from './theme';
 import Modal3 from './components/widgets/modals/Modal3';
 // import { MessageList } from 'react-chat-elements';
 import 'react-chat-elements/dist/main.css';
-import ChatLayout from './components/widgets/modals/ChatLayout';
+import ChatModal from './components/widgets/modals/ChatModal';
 
 const App = () => {
   const { settings } = useSettings();
@@ -36,7 +36,7 @@ const App = () => {
         <CssBaseline />
         <SettingsDrawer />
         <Modal3 />
-        <ChatLayout />
+        <ChatModal />
       </RTL>
     </ThemeProvider>
   );
