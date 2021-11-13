@@ -8,10 +8,7 @@ import useScrollReset from './hooks/useScrollReset';
 import useSettings from './hooks/useSettings';
 import gtm from './lib/gtm';
 import { createCustomTheme } from './theme';
-// import Modal4 from './components/widgets/modals/Modal4';
 import Modal3 from './components/widgets/modals/Modal3';
-// import { MessageList } from 'react-chat-elements';
-import 'react-chat-elements/dist/main.css';
 import ChatModal from './components/widgets/modals/ChatModal';
 
 const App = () => {

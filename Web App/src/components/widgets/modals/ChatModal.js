@@ -1,7 +1,7 @@
 import { Box, Paper, Typography, TextField } from '@material-ui/core';
 import Modal4 from './Modal4';
 import { MessageList } from 'react-chat-elements';
-import 'react-chat-elements/dist/main.css';
+import '../../../styles/rceStyles.css';
 import PaperclipIcon from '../../../icons/Paperclip';
 import NoteIcon from '../../../icons/Note';
 import CircularPlusIcon from '../../../icons/CircularPlus';
@@ -20,83 +20,155 @@ const ChatLayout = () => (
         backgroundColor: 'background.default',
         display: 'flex',
         p: 3,
+        flexDirection: 'column',
         width: '100%',
-        flexDirection: 'column'
+        height: 'fit'
       }}
     >
       <Paper
         elevation={12}
         sx={{
-          height: '68vh',
+          height: 'fit',
           width: '100%',
-          flexDirection: 'column'
+          flexDirection: 'column',
+          display: 'flex',
         }}
       >
         <Paper
           elevation={0}
           sx={{
-            height: '10vh',
-            width: '100%',
+            height: '58vh',
+            width: 'fit',
             flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center'
+            display: 'flex',
+            minHeight: '264px',
           }}
         >
-          <Typography
-            color="textPrimary"
-            variant="h6"
+          <Paper
+            elevation={0}
             sx={{
-              position: 'sticky',
-              p: 2,
+              width: '100%',
+              flexDirection: 'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              display: 'flex',
             }}
           >
-            User Name
-          </Typography>
-        </Paper>
-        <Paper
-          elevation={0}
-          sx={{
-            height: '48vh',
-            width: '98%',
-            p: 2,
-            overflow: 'auto',
-            '::-webkit-scrollbar': {
-              width: '5px',
-            },
-            '::-webkit-scrollbar-thumb': {
-              boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
-              borderRadius: '20px'
-            },
-          }}
-        >
-          <MessageList
-            className="message-list"
-            lockable
-            dataSource={[
-              {
-                position: 'right',
-                type: 'text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-                date: new Date(),
+            <Typography
+              color="textPrimary"
+              variant="h6"
+              sx={{
+                position: 'sticky',
+                p: 2,
+              }}
+            >
+              User Name
+            </Typography>
+          </Paper>
+          <Paper
+            elevation={0}
+            sx={{
+              width: '98%',
+              p: 2,
+              overflow: 'auto',
+              '::-webkit-scrollbar': {
+                width: '5px',
               },
-              {
-                position: 'left',
-                type: 'text',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-                date: new Date(),
-              }
-            ]}
-          />
+              '::-webkit-scrollbar-thumb': {
+                boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
+                borderRadius: '20px'
+              },
+            }}
+          >
+            <MessageList
+              className="message-list"
+              lockable
+              dataSource={[
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'right',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                },
+                {
+                  position: 'left',
+                  type: 'text',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+                  date: new Date(),
+                }
+              ]}
+            />
+          </Paper>
         </Paper>
         <Paper
           elevation={0}
           sx={{
-            height: '10vh',
             width: '100%',
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            p: '2px'
           }}
         >
           <PaperclipIcon fontSize="medium" sx={{ mr: 1 }} />

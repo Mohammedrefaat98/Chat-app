@@ -113,7 +113,7 @@ const Modal4 = () => (
       backgroundColor: 'background.default',
       display: 'flex',
       flexDirection: 'column',
-      p: 3,
+      p: 3
     }}
   >
     <Paper
@@ -121,13 +121,15 @@ const Modal4 = () => (
       sx={{
         height: 'fit',
         minWidth: '25vw',
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
       <Paper
         elevation={0}
         sx={{
           display: 'flex',
-          height: '10vh'
+          width: 'fit'
         }}
       >
         <Typography
@@ -145,7 +147,6 @@ const Modal4 = () => (
       <Paper
         elevation={0}
         sx={{
-          backgroundColor: 'rgba(0,0,0,0)',
           px: 2,
           height: 'fit',
           width: '100%',
@@ -164,7 +165,8 @@ const Modal4 = () => (
               boxShadow: 'inset -6px 0 3px 3px rgba(66,66,66,50)',
               borderRadius: '20px'
             },
-            maxHeight: '58vh'
+            minHeight: '264px',
+            height: '58vh'
           }}
         >
           {contacts.length <= 0 ? (
