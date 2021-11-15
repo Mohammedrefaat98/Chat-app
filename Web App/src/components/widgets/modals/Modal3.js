@@ -17,7 +17,7 @@ const Modal3 = () => (
       textAlign: '-webkit-center'
     }}
   >
-    <Paper elevation={12} sx={{ flex: 1, textAlign: '-webkit-center', justifyContent: 'center', width: '80%', maxWidth: 'md' }}>
+    <Paper elevation={12} sx={{ flex: 1, textAlign: '-webkit-center', justifyContent: 'center', width: '80%', maxWidth: 'md', minWidth: '400px' }}>
       <Box sx={{ p: 3 }}>
         <Container width="30%" maxWidth="md" sx={{ textAlign: '-webkit-center' }}>
           <Box

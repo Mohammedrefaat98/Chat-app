@@ -59,7 +59,7 @@ const SettingsDrawer = () => {
           onClick={handleOpen}
           size="medium"
           sx={{
-            bottom: 0,
+            top: 0,
             margin: (theme) => theme.spacing(4),
             position: 'fixed',
             right: 0,

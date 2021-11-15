@@ -22,13 +22,11 @@ const ChatLayout = () => (
         p: 3,
         flexDirection: 'column',
         width: '100%',
-        height: 'fit'
       }}
     >
       <Paper
         elevation={12}
         sx={{
-          height: 'fit',
           width: '100%',
           flexDirection: 'column',
           display: 'flex',
@@ -168,7 +166,8 @@ const ChatLayout = () => (
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-            p: '2px'
+            p: '2px',
+            px: '10px'
           }}
         >
           <PaperclipIcon fontSize="medium" sx={{ mr: 1 }} />

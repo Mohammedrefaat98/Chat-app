@@ -119,7 +119,6 @@ const Modal4 = () => (
     <Paper
       elevation={12}
       sx={{
-        height: 'fit',
         minWidth: '25vw',
         display: 'flex',
         flexDirection: 'column',
@@ -148,7 +147,6 @@ const Modal4 = () => (
         elevation={0}
         sx={{
           px: 2,
-          height: 'fit',
           width: '100%',
           display: 'flex-inline',
         }}
